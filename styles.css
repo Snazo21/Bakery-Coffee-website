@@ -1,0 +1,80 @@
+.NavigationLinks{
+    display : flex;
+    justify-content : space-around;
+    list-style-type : none;
+}
+/*Change color of the links on hover if using mouse*/
+@media screen and(hover : hover){
+li a:hover{
+    background-color : lightblue;
+}
+}
+li a.active{
+    background: lightblue;
+}
+.logo{
+    height : 200px;
+    width : 250px;
+}
+footer{
+    position : static;
+    display : flex;
+    justify-content: center;
+}
+.AboutContent{
+    padding : 100px;
+}
+.ContactContent{
+    padding : 100px;
+}
+.BeveragesContent{
+    padding : 100px;
+}
+.BeverageList{
+    list-style-type : none;
+}
+.bevImages{
+    height : 100px;
+    width :100px;
+}
+.BakeryContent{
+    padding : 100px;
+}
+h3{
+    padding : 20px;
+    display:flex;
+    justify-content: center;
+}
+h5{
+    display:flex;
+    justify-content: center;    
+}
+.homeImage{
+    height:280px;
+    width:280px;
+    position: static;
+}
+.homeImageDiv{
+    display : flex;
+    justify-content: center;
+}
+.homeContent{
+    position:static;
+    top:50px;
+    margin-left : 150px;
+}
+/*Theme for dark screen users*/
+@media screen and (prefers-color-scheme: dark){
+header{
+    background-color: black;
+    color: white;
+}
+body{
+    background-color: black;
+    color: white;
+}
+footer{
+    background-color: black;
+    color: white;
+}
+}
