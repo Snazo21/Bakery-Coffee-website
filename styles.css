@@ -66,15 +66,24 @@ h5{
 /*Theme for dark screen users*/
 @media screen and (prefers-color-scheme: dark){
 header{
-    background-color: black;
+    background-color: rgb(18, 17, 17);
     color: white;
 }
 body{
-    background-color: black;
+    background-color: rgb(18, 17, 17);
     color: white;
 }
 footer{
-    background-color: black;
+    background-color: rgb(18, 17, 17);
     color: white;
 }
+li a{
+    color : burlywood;
+}
+}
+.price{
+    text-align: right;
+}
+hr{
+    background-color : burlywood
 }
