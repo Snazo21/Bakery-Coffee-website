@@ -1,16 +1,21 @@
 .NavigationLinks{
     display : flex;
-    justify-content : space-around;
+    justify-content : center;
     list-style-type : none;
+    gap : 120px;
 }
-/*Change color of the links on hover if using mouse*/
-@media screen and(hover : hover){
 li a:hover{
-    background-color : lightblue;
+    background-color : rgb(185, 136, 73);;
+    color : white;
 }
+li a:active{
+    background-color: rgb(185, 136, 73);;
+    color : white;
 }
-li a.active{
-    background: lightblue;
+li a{
+    color: rgb(185, 136, 73);
+    font-weight: bold;
+    font-size:large;
 }
 .logo{
     height : 200px;
@@ -22,7 +27,8 @@ footer{
     justify-content: center;
 }
 .AboutContent{
-    padding : 100px;
+    padding : 20px;
+    text-align: center;
 }
 .ContactContent{
     padding : 100px;
@@ -59,11 +65,76 @@ h5{
     justify-content: center;
 }
 .homeContent{
-    position:static;
-    top:50px;
+    position:relative;
+    top:20px;
+    left:60px;
     margin-left : 150px;
 }
-/*Theme for dark screen users*/
+.price{
+    text-align: right;
+}
+hr{
+    background-color : burlywood
+}
+.home{
+    display:flex;
+    justify-content: flex-start;
+    gap: 100px;
+    position:relative;
+    left:180px;
+}
+button{
+    color:white;
+    background-color : rgb(185, 136, 73);
+    box-shadow : 2px 2px 5px grey;
+    border-color : rgb(185, 136, 73);
+    height : 50px;
+    width : 200px;
+    border-radius : 5;
+}
+/*hide the toggle on and off for the menu under the menu icon*/
+#menu-toggle, .menuButton {
+    display: none;
+}
+#menu-toggle:checked + .NavigationLinks {
+     display: flex;
+}
+/*Change the content display for devices of tablet size and less*/
+@media screen and (max-width: 768px) {
+    .menuButton {
+        display : block;
+        padding: 10px;
+        text-align: start;
+        font-weight: bold;
+        width : min-content;
+    }
+
+    .NavigationLinks {
+        display: none; 
+        flex-direction: column;
+        gap: 20px; 
+        background-color: #121111;
+        padding: 20px;
+    }
+    .home {
+        flex-direction: column-reverse; 
+        align-items: center;    
+        left: 0;                
+        gap: 20px;
+    }
+
+    .homeContent {
+        margin-left: 0;         
+        left: 0;               
+        text-align: center;    
+    }
+
+    .logo {
+        width: 180px;           
+        height: auto;
+    }
+}
+/*Change the theme for dark screen users*/
 @media screen and (prefers-color-scheme: dark){
 header{
     background-color: rgb(18, 17, 17);
@@ -81,9 +152,4 @@ li a{
     color : burlywood;
 }
 }
-.price{
-    text-align: right;
-}
-hr{
-    background-color : burlywood
-}
+
